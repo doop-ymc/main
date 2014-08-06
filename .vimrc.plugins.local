@@ -4,3 +4,14 @@
 
 " Add your customized plugins:
 " Example: Plugin 'foo/bar/foobar'
+" 常规模式下输入 F2 调用插件
+nmap <F2> :NERDTreeToggle<CR>
+Bundle 'Yggdroot/indentLine'
+Bundle 'spf13/PIV'
+Bundle 'jiangmiao/auto-pairs'
+
+" 设置Gvim的对齐线样式
+"if g:isGUI
+let g:indentLine_char = "|"
+let g:indentLine_first_char = "|"
+"endif

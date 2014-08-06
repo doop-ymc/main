@@ -1,2 +1,37 @@
 " This file will be loaded at the end of .vimrc.
 " This file is designed to add your own vim scripts or override the exVim's .vimrc settings.
+" ==================================================
+"                       ymc
+" ==================================================
+" 可用<C-k,j,h,l>切换到上下左右的窗口中去
+noremap <c-k> <c-w>k
+noremap <c-j> <c-w>j
+noremap <c-h> <c-w>h
+noremap <c-l> <c-w>l
+
+set smartindent                                       "启用智能对齐方式
+set foldenable                                        "启用折叠
+set smarttab                                          "指定按一次backspace就删除shiftwidth宽度的空格
+" 常规模式下输入 cS 清除行尾空格
+nmap cS :%s/\s\+$//g<cr>:noh<cr>
+
+" 常规模式下输入 cM 清除行尾 ^M 符号
+nmap cM :%s/\r$//g<cr>:noh<cr>
+" Ctrl + K 插入模式下光标向上移动
+imap <c-k> <Up>
+
+" Ctrl + J 插入模式下光标向下移动
+imap <c-j> <Down>
+
+" Ctrl + H 插入模式下光标向左移动
+imap <c-h> <Left>
+
+" Ctrl + L 插入模式下光标向右移动
+imap <c-l> <Right>
+set cmdheight=2                                       "设置命令行的高度为2，默认为1
+" set shortmess=atI                                     "去掉欢迎界面
+hi clear exConfirmLine
+hi exConfirmLine gui=none guibg=#000 term=none cterm=none ctermbg=darkyellow
+
+hi clear exTargetLine
+hi exTargetLine gui=none guibg=#000 term=none cterm=none ctermbg=yellow

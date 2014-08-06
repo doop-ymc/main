@@ -293,7 +293,7 @@ set nf=
 " Desc: Fold text
 " ------------------------------------------------------------------ 
 
-set foldmethod=marker foldmarker={,} foldlevel=9999
+set foldmethod=indent foldmarker={,} foldlevel=2
 set diffopt=filler,context:9999
 
 " ------------------------------------------------------------------ 
