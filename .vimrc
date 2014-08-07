@@ -28,7 +28,7 @@ endif
 
 " always use English menu
 " NOTE: this must before filetype off, otherwise it won't work
-set langmenu=none
+set langmenu=php
 
 " use English for anaything in vim-editor. 
 if WINDOWS()
@@ -147,10 +147,10 @@ set maxmempattern=1000 " enlarge maxmempattern from 1000 to ... (2000000 will gi
 " xterm settings
 "/////////////////////////////////////////////////////////////////////////////
 
-behave xterm  " set mouse behavior as xterm
-if &term =~ 'xterm'
-    set mouse=a
-endif
+"behave xterm  " set mouse behavior as xterm
+"if &term =~ 'xterm'
+"    set mouse=a
+"endif
 
 "/////////////////////////////////////////////////////////////////////////////
 " Variable settings ( set all )
@@ -293,7 +293,7 @@ set nf=
 " Desc: Fold text
 " ------------------------------------------------------------------ 
 
-set foldmethod=indent foldmarker={,} foldlevel=2
+set foldmethod=indent foldmarker={,} foldlevel=3
 set diffopt=filler,context:9999
 
 " ------------------------------------------------------------------ 
@@ -488,4 +488,9 @@ if filereadable(expand(vimrc_local_path))
     exec 'source ' . fnameescape(vimrc_local_path)
 endif
 
+nnoremap <C-2> :bn<CR>
+nnoremap <C-1> :bp<CR>
 " vim:ts=4:sw=4:sts=4 et fdm=marker:
+set autoindent
+set smartindent
+

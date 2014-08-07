@@ -55,6 +55,10 @@
 *.hxx			text
 *.inl           text
 
+# php header
+*.php			text
+*.class.php     text
+
 # c/cpp srouce
 *.c			    text
 *.C			    text

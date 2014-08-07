@@ -30,8 +30,11 @@ imap <c-h> <Left>
 imap <c-l> <Right>
 set cmdheight=2                                       "设置命令行的高度为2，默认为1
 " set shortmess=atI                                     "去掉欢迎界面
-hi clear exConfirmLine
-hi exConfirmLine gui=none guibg=#000 term=none cterm=none ctermbg=darkyellow
-
-hi clear exTargetLine
-hi exTargetLine gui=none guibg=#000 term=none cterm=none ctermbg=yellow
+nmap <c-1> :bp<CR>
+nmap <c-2> :bn<CR>
+" 开户复制模式
+set pastetoggle=<F12>           " pastetoggle (sane indentation on pastes)
+" set comments=sl:/*,mb:*,elx:*/  " auto format comment blocks
+filetype indent on
+set autoindent
+set smartindent
